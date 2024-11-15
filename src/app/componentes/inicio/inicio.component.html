@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="row">
+        <h1>Formulario Reactivo</h1>
+      <div class="col-md-12">
+        <form [formGroup]="formularioForm" (ngSubmit)="enviarDatos()">
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" class="form-control"  
+                formControlName="nombre" id="nombre" 
+                aria-describedby="nombrelHelp" 
+                placeholder="Ingrese Nombre">
+              <small class="form-text text-muted">Debe ingresar un nombre. No se aceptan símbolos.</small>
+            </div>
+            <div class="form-group">
+              <label for="apellido">Apellido</label>
+              <input type="text" class="form-control" 
+                formControlName="apellido" id="apellido" 
+                aria-describedby="apellidoHelp" 
+                placeholder="Ingrese Apellido">
+              <small id="apellidoHelp" class="form-text text-muted">Debe ingresar un nombre. No se aceptan símbolos.</small>
+            </div>
+            <button type="submit" class="btn btn-primary" >Enviar</button>
+          </form>
+      </div>
+    </div>
+    <div class="row">
+      <button (click)="activar_invocable1()" type="submit" class="btn btn-primary" >Activar invocable 1</button>
+
+      <button (click)="activar_invocable2()" type="submit" class="btn btn-danger" >Activar invocable 2</button>
+
+      <button (click)="activar_invocable3()" type="submit" class="btn btn-warning" >Activar invocable 3</button>
+    </div>
+    <div class="row">
+      <button (click)="activar_sumar()" type="submit" class="btn btn-info" >Activar Suma</button>
+    </div>
+    <div class="row">
+      <button (click)="activar_promedio()" type="submit" class="btn btn-dark" >Activar Suma</button>
+    </div>
+    <div class="row">
+      <h2>Notas</h2>
+      <form [formGroup]="formularioForm" (ngSubmit)="enviarDatos()">
+        <div class="form-group">
+          <label for="nota1">Nota 1</label>
+          <input type="number" class="form-control"  
+            aria-describedby="nota1lHelp" 
+            placeholder="Debe ingresar Nota 1.">
+          <small class="form-text text-muted"></small>
+        </div>
+        <div class="form-group">
+          <label for="nota2">Nota 2</label>
+          <input type="number" class="form-control" 
+            aria-describedby="nota2" 
+            placeholder="Debe ingresar Nota 2.">
+          <small id="nota2" class="form-text text-muted"></small>
+        </div>
+        <button type="submit" class="btn btn-success" >Enviar</button>
+      </form>
+    </div>
+  </div>
